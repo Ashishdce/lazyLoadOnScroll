@@ -1,0 +1,12 @@
+div {
+    width: 100%;
+    height: 400px;
+    background-color: #c3c3c3;
+}
+
+h1 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+}
