@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
-import { throttler } from './throttler';
+import { throttler } from '../throttler';
 
 const BUFFER_TIME = 100;
-const DEBOUNCE_TIME = 180;
-const THROTTLE_TIME = 180;
 
 @Injectable()
 export class ScrollService {
@@ -16,22 +14,10 @@ export class ScrollService {
 	 * Throttled Scroll Event of bound targets
 	 */
 	public onScroll: Observable<Event>;
-	
-	/**
-	 * Emits when the scrolling is started on bound targets
-	 */
-	public onScrollStart: Observable<Event>;
-
-	/**
-	 * Emits when the scrolling is finished on bound targets
-	 */
-	public onScrollEnd: Observable<Event>;
 
 	constructor() {
 		this.handler = ScrollService._handler.bind(this);
 		this.onScroll = this._subj.throttleTime(BUFFER_TIME).share();
-		this.onScrollEnd = this._subj.debounceTime(DEBOUNCE_TIME).share();
-		this.onScrollStart = throttler(this._subj, THROTTLE_TIME);
 		this.bind(window);
 	}
 

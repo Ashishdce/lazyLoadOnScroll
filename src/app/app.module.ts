@@ -5,15 +5,15 @@ import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
-import { ThirdComponent } from './third/third.component';
-import { FourthComponent } from './fourth/fourth.component';
-import { FifthComponent } from './fifth/fifth.component';
-import { DynamicDirective } from './dynamic.directive';
+import { FirstComponent } from './components/first/first.component';
+import { SecondComponent } from './components/second/second.component';
+import { ThirdComponent } from './components/third/third.component';
+import { FourthComponent } from './components/fourth/fourth.component';
+import { FifthComponent } from './components/fifth/fifth.component';
+import { DynamicDirective } from './directives/dynamic.directive';
 
-import { TriggerService}  from './trigger.service';
-import { ScrollService } from './scroll.service';
+import { TriggerService}  from './services/trigger.service';
+import { ScrollService } from './services/scroll.service';
 
 
 @NgModule({

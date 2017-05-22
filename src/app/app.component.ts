@@ -1,6 +1,6 @@
 import { Component, ViewChildren, ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
-import { DynamicDirective } from './dynamic.directive';
-import { TriggerService } from './trigger.service';
+import { DynamicDirective } from './directives/dynamic.directive';
+import { TriggerService } from './services/trigger.service';
 
 @Component({
   selector: 'app-root',

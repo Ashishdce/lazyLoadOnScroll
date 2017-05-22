@@ -1,13 +1,13 @@
 import { Directive, ElementRef, Output, Input, EventEmitter ,ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { defer, forEach } from 'lodash';
-import { TriggerService }  from './trigger.service';
+import { TriggerService }  from '../services/trigger.service';
 
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
-import { ThirdComponent } from './third/third.component';
-import { FourthComponent } from './fourth/fourth.component';
-import { FifthComponent } from './fifth/fifth.component';
+import { FirstComponent } from '../components/first/first.component';
+import { SecondComponent } from '../components/second/second.component';
+import { ThirdComponent } from '../components/third/third.component';
+import { FourthComponent } from '../components/fourth/fourth.component';
+import { FifthComponent } from '../components/fifth/fifth.component';
 
 const SELECTOR = 'in-view';
 
