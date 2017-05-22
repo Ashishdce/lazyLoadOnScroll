@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { ViewportModule } from 'angular2-viewport';
+
 
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
@@ -11,6 +11,10 @@ import { ThirdComponent } from './third/third.component';
 import { FourthComponent } from './fourth/fourth.component';
 import { FifthComponent } from './fifth/fifth.component';
 import { DynamicDirective } from './dynamic.directive';
+
+import { TriggerService}  from './trigger.service';
+import { ScrollService } from './scroll.service';
+
 
 @NgModule({
   declarations: [
@@ -25,11 +29,10 @@ import { DynamicDirective } from './dynamic.directive';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    ViewportModule
+    HttpModule
   ],
   entryComponents: [AppComponent, FirstComponent, SecondComponent, ThirdComponent, FourthComponent, FifthComponent],
-  providers: [],
+  providers: [TriggerService, ScrollService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
